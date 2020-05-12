@@ -56,7 +56,6 @@
 - rssh
 - u-boot-tools
 - ntpdate
-- onlp
 - parted
 - watchdog
 - netplug
