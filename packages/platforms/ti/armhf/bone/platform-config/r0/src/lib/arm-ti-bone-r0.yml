@@ -10,12 +10,12 @@ arm-ti-bone-r0:
 
   flat_image_tree:
     kernel:
-      <<: *arm-iproc-kernel
+      <<: *armhf-iproc-kernel
     dtb:
-      =: accton_as4610_54.dtb
+      =: arm-ti-bone.dtb
       <<: *arm-iproc-kernel-package
     itb:
-      <<: *armel-itb
+      <<: *armhf-itb
 
   loader:
 
