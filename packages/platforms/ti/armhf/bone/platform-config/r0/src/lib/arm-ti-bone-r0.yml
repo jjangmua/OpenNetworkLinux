@@ -10,7 +10,7 @@ arm-ti-bone-r0:
 
   flat_image_tree:
     kernel:
-      <<: *armhf-iproc-kernel
+      <<: *armhf-iproc-4-14-kernel
     dtb:
       =: arm-ti-bone.dtb
       <<: *arm-iproc-kernel-package
@@ -18,9 +18,13 @@ arm-ti-bone-r0:
       <<: *armhf-itb
 
   loader:
+    device: /dev/mmcblk0
+    ##partition: /dev/mmcblk0p1
+    loadaddr: 0xa0000000
+    nos_bootcmds: *mmc_bootcmds
 
     environment:
-    - device: /dev/mtd1
+    - device: /dev/mmcblk0
       env_offset: 0x00000000
-      env_size: 0x00002000
-      sector_size: 0x00040000
+      env_size: 0x00020000
+      sector_size: 0x00020000
