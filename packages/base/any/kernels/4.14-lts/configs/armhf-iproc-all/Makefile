@@ -30,7 +30,7 @@ K_PATCH_DIR := $(THIS_DIR)/patches
 
 include ../../kconfig.mk
 K_CONFIG := armhf-iproc-all.config
-K_BUILD_TARGET := Image
+K_BUILD_TARGET := Image am335x-boneblack.dtb
 K_COPY_SRC := arch/arm/boot/Image
 K_COPY_GZIP := 1
 ifndef K_COPY_DST

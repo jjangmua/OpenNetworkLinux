@@ -12,7 +12,7 @@ arm-ti-bone-r0:
     kernel:
       <<: *armhf-iproc-4-14-kernel
     dtb:
-      =: arm-ti-bone.dtb
+      =: am335x-boneblack.dtb
       <<: *armhf-iproc-4-14-kernel-package
     itb:
       <<: *armhf-itb
