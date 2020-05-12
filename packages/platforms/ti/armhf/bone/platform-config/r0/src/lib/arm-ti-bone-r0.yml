@@ -13,7 +13,7 @@ arm-ti-bone-r0:
       <<: *armhf-iproc-4-14-kernel
     dtb:
       =: arm-ti-bone.dtb
-      package: onl-platform-build-arm-ti-bone-r0:armhf
+      <<: *armhf-iproc-4-14-kernel-package
     itb:
       <<: *armhf-itb
 
