@@ -18,13 +18,13 @@ arm-ti-bone-r0:
       <<: *armhf-itb
 
   loader:
-    device: /dev/mmcblk0
-    ##partition: /dev/mmcblk0p1
-    loadaddr: 0xa0000000
+    device: /dev/mmcblk1
+    ##partition: /dev/mmcblk1p1
+    loadaddr: 0x82000000
     nos_bootcmds: *mmc_bootcmds
 
-    environment:
-    - device: /dev/mmcblk0
-      env_offset: 0x00000000
-      env_size: 0x00020000
-      sector_size: 0x00020000
+    ##environment:
+    ##- device: /dev/mmcblk1
+    ##  env_offset: 0x00000000
+    ##  env_size: 0x00020000
+    ##  sector_size: 0x00020000
