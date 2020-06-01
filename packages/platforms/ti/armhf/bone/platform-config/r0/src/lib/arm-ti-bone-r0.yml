@@ -23,8 +23,23 @@ arm-ti-bone-r0:
     loadaddr: 0x82000000
     nos_bootcmds: *mmc_bootcmds
 
-    ##environment:
-    ##- device: /dev/mmcblk1
-    ##  env_offset: 0x00000000
-    ##  env_size: 0x00020000
-    ##  sector_size: 0x00020000
+    environment:
+    - device: /dev/mtd2
+      env_offset: 0x00000000
+      env_size: 0x00020000
+      sector_size: 0x00020000
+
+  installer:
+  - ONL-BOOT:
+      =: 128MiB
+      format: ext2
+      ##format: raw
+  - ONL-CONFIG:
+      =: 128MiB
+      format: ext4
+  - ONL-IMAGES:
+      =: 1GiB
+      format: ext4
+  - ONL-DATA:
+      =: 100%
+      format: ext4
